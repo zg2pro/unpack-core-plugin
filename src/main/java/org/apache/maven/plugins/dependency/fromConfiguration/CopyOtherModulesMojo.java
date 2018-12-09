@@ -10,11 +10,13 @@ import org.apache.maven.plugins.annotations.ResolutionScope;
 import org.apache.maven.project.MavenProject;
 import org.codehaus.plexus.util.StringUtils;
 
-//CHECKSTYLE_OFF: LineLength
-@Mojo(name = "copy-modules", requiresDependencyResolution = ResolutionScope.TEST, defaultPhase = LifecyclePhase.PROCESS_SOURCES, threadSafe = true)
-//CHECKSTYLE_ON: LineLength
-public class CopyOtherModulesMojo
-        extends CopyMojo {
+/**
+ * This mojo helps copying the group dependencies to the current target
+ * @author zg2pro
+ */
+@Mojo(name = "copy-modules", requiresDependencyResolution = ResolutionScope.TEST, 
+        defaultPhase = LifecyclePhase.PROCESS_SOURCES, threadSafe = true)
+public class CopyOtherModulesMojo extends CopyMojo {
 
     @Override
     protected void doExecute()

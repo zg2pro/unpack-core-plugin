@@ -2,13 +2,22 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
-   
-    <groupId>com.github.zg2pro</groupId>
+    <parent>
+        <groupId>com.github.zg2pro</groupId>
+        <artifactId>zg2pro-spring-core</artifactId>
+        <version>0.4</version>
+    </parent>
     <version>0.0.1-SNAPSHOT</version>
+    <groupId>com.github.zg2pro</groupId>
     <artifactId>unpack-core-plugin</artifactId>
+    <name>unpack-core-plugin</name>
+    <description>
+        maven plugin that takes all dependencies from same groupId, 
+        unpacks them from the jar, 
+        and zips them inside the target directory
+    </description>
     <packaging>maven-plugin</packaging>
     <url>https://github.com/zg2pro/unpack-core-plugin</url>
-    
     <properties>
         <java.version>8</java.version>
         <maven.compiler.source>1.8</maven.compiler.source>
@@ -17,6 +26,7 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
     </properties>
+
 
     <licenses>
         <license>
@@ -47,6 +57,9 @@
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-plugin-plugin</artifactId>
                 <version>3.6.0</version>
+                <!--                <configuration>
+                    <skipErrorNoDescriptorsFound>true</skipErrorNoDescriptorsFound>
+                </configuration>-->
             </plugin>
         </plugins>
     </build>
@@ -181,6 +194,4 @@
             </build>
         </profile>
     </profiles>
-
-
 </project>
