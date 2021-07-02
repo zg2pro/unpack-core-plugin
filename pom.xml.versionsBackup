@@ -4,7 +4,7 @@
     <modelVersion>4.0.0</modelVersion>
    
     <groupId>com.github.zg2pro</groupId>
-    <version>0.0.2-SNAPSHOT</version>
+    <version>0.0.1</version>
     <artifactId>unpack-core-plugin</artifactId>
     <packaging>maven-plugin</packaging>
     <url>https://github.com/zg2pro/unpack-core-plugin</url>
