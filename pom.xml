@@ -4,10 +4,12 @@
     <modelVersion>4.0.0</modelVersion>
    
     <groupId>com.github.zg2pro</groupId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>0.0.1</version>
     <artifactId>unpack-core-plugin</artifactId>
     <packaging>maven-plugin</packaging>
     <url>https://github.com/zg2pro/unpack-core-plugin</url>
+    <name>unpack core plugin</name>
+    <description>it's very useful when wanting to cheat jacoco and take advantage of classes from neighbor modules in multi modules projects</description>
     
     <properties>
         <java.version>8</java.version>
